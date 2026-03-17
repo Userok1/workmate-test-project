@@ -16,6 +16,7 @@ def median(rows: Dict[str, List[int]]) -> List[Tuple[str, float]]:
     for student_name, coffee_spent in rows.items():
         # logger.info(f"{student_name} потратила на кофе: {coffee_spent}")
         result_lst.append((student_name, stat_median(coffee_spent)))
+    result_lst.sort(key=lambda x: x[1], reverse=True)
     return result_lst
 
 

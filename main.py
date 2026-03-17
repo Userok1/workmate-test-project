@@ -15,7 +15,6 @@ def main() -> None:
     files, report = get_args()
     rows = read_files(files)
     table_data = median(rows)
-    table_data.sort(key=lambda x: x[1], reverse=True)
     print()
     print(tabulate(table_data, headers=['student_name', report]))
 
